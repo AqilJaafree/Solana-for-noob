@@ -1,2 +1,2 @@
 # Solana Uitm Workshop
-## Expense Tracker on Anchorgit commit -m "first commit"
+## Expense Tracker on Anchor
