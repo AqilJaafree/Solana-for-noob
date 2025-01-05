@@ -77,5 +77,73 @@ wallet = "/home/YOUR_USERNAME/devnet-wallet.json"  # Replace YOUR_USERNAME with 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
 ```
+## Building and Deploying
+
+1. Build the program:
+
+```bash
+anchor build
+```
+
+2. If your machine got a problem when building use this alternative instead:
+
+Notes. Building programs with the Solana CLI may embed machine specific code into the resulting binary. As a result, building the same program on different machines may produce different executables. To get around this problem, one can build inside a docker image with pinned dependencies to produce a verifiable build.
+
+Reference:
+```bash
+https://www.anchor-lang.com/docs/verifiable-builds
+```
+
+Install docker on your windows/linux/mac
+```bash
+https://docs.docker.com/get-started/get-docker/
+```
+
+Then you can run this build
+```bash
+Anchor build --verifiable
+```
+
+3. Get the program ID:
+```bash
+solana address -k target/deploy/expense_tracker-keypair.json
+```
+
+4. Deploy to devnet:
+```bash
+anchor deploy
+```
+## Common Issues and Solutions
+
+1. Insufficient funds error
+- Request more airdrops: solana airdrop 2
+- Wait 15 seconds between airdrops
+- Maximum 2 SOL per airdrop on devnet
+- You can request faucet here alternatively: https://faucet.solana.com/
+
+2. Keypair not found error
+- Make sure the wallet path in Anchor.toml is correct
+- Verify the keypair file exists: ls ~/devnet-wallet.json
 
 
+3. Program ID mismatch
+- Ensure the program ID is the same in both
+- declare_id!() in your program code
+- Anchor.toml under [programs.devnet]
+
+4. Build fails
+- Run anchor clean
+- Then try anchor build again
+
+## Program Structure
+The contract has three main functions:
+
+- initialize_expense: Create a new expense record
+- modify_expense: Update an existing expense
+- delete_expense: Remove an expense record
+
+## Next Steps
+After successful deployment, you can:
+
+- Create a frontend application to interact with your contract
+- Add more features to the contract
