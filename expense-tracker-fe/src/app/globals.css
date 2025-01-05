@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Wallet Button */
+.wallet-adapter-button-trigger {
+  background-color: #6d28d9 !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s !important;
+  height: auto !important;
+}
+
+.wallet-adapter-button-trigger:hover {
+  background-color: #7c3aed !important;
+}
+
+/* Wallet Dropdown */
+.wallet-adapter-dropdown-list {
+  background: #1f2937 !important;
+  border: 1px solid #374151 !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.wallet-adapter-dropdown-list-item {
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  color: #e5e7eb !important;
+  transition: all 0.2s !important;
+  border-radius: 8px !important;
+}
+
+.wallet-adapter-dropdown-list-item:hover {
+  background-color: #374151 !important;
+}
+
+/* Wallet Modal */
+.wallet-adapter-modal-wrapper {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151 !important;
+  border-radius: 16px !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #e5e7eb !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.wallet-adapter-modal-list {
+  padding: 8px !important;
+}
+
+.wallet-adapter-modal-list-item {
+  border-radius: 12px !important;
+  transition: all 0.2s !important;
+  padding: 12px !important;
+}
+
+.wallet-adapter-modal-list-item:hover {
+  background-color: #374151 !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background-color: #4b5563 !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
+}
+
+/* Connected Wallet Button */
+.wallet-adapter-button {
+  background-color: #6d28d9 !important;
+  font-family: inherit !important;
+}
+
+.wallet-adapter-button-start-icon {
+  margin-right: 12px !important;
+}
+
+/* Truncated Address */
+.wallet-adapter-button-trigger span {
+  font-size: 14px !important;
+}
+
+/* Wallet Connection Status */
+.wallet-adapter-button[data-wallet-connected="true"] {
+  background-color: #059669 !important;
+}
+
+/* Copy Address Button */
+.wallet-adapter-dropdown-list-item[data-copy-address="true"] {
+  color: #6d28d9 !important;
+}
