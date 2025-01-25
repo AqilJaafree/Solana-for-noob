@@ -1,8 +1,10 @@
-# Solana Expense Tracker Workshop 2025
+# Solana for noob
 
-A decentralized expense tracking application built on Solana blockchain. This project consists of a Solana smart contract (built with Anchor) and a Next.js frontend application.
+Compilation for solana projects.
 
 ## Project Structure
+
+Expense tracker contract and front end
 ```bash
 expense-tracker/
 ├── expense-tracker/        # Anchor/Solana smart contract
@@ -23,37 +25,31 @@ expense-tracker/
 └── package.json
 ```
 
-## Smart Contract Features
-
-- Create expense records with merchant name and amount
-- Modify existing expenses
-- Delete expenses
-- PDA-based account management
-- Secure ownership validation
-
-## Frontend Features
-
-- Connect multiple Solana wallets (Phantom, Brave)
-- Create and track expenses
-- View expense history
-- Delete existing expenses
-- Responsive design with dark mode
-
-## Prerequisites
-
-- Node.js v16+ and npm/yarn
-- Rust and Cargo
-- Solana Tool Suite
-- Anchor Framework
-
-## Front end setup
-
-cd expense-tracker-fe
-npm install
-# or
-yarn install
-
-## .env
+Dummy staking 
 ```bash
-NEXT_PUBLIC_RPC_URL=https://api.devnet.solana.com
+dummy_stake/
+├── programs/
+│   └── dummy_stake/
+│       ├── src/
+│       │   ├── instructions/
+│       │   │   ├── initialize.rs    # Initialize pool instruction
+│       │   │   ├── stake.rs         # Stake tokens instruction
+│       │   │   ├── unstake.rs       # Unstake tokens instruction
+│       │   │   ├── shared.rs        # Shared functions
+│       │   │   └── mod.rs          # Module declarations
+│       │   ├── state.rs            # Program state definitions
+│       │   ├── constants.rs        # Program constants
+│       │   ├── error.rs            # Custom error types
+│       │   └── lib.rs              # Program entry point
+│       └── Cargo.toml
+├── tests/                         # Test files
+├── Anchor.toml                    # Anchor configuration
+├── Cargo.toml
+└── package.json
 ```
+
+
+
+
+
+
