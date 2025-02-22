@@ -66,6 +66,19 @@ Current working versions:
 - solana-bankrun: 0.4.0
 - @solana/web3.js: 1.98.0
 
+Add solana web3js ver 1.98
+```bash
+pnpm add @solana/web3.js@1.98.0
+```
+
+## Package json file
+Make sure add this to your package.json file to test it
+```json
+ "scripts": {
+    "test": "jest --runInBand"
+  }
+```
+
 ## Example Test
 
 Here's a basic test demonstrating a SOL transfer:
