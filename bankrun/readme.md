@@ -5,6 +5,13 @@ This repository demonstrates how to set up and run tests using solana-bankrun, a
 ## Setup Steps
 
 1. Initialize project and install solana-bankrun:
+
+create package.json
+```bash
+npm init -y
+```
+
+Install package from backrun
 ```bash
 pnpm add solana-bankrun
 ```
